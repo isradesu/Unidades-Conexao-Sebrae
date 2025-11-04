@@ -1,0 +1,373 @@
+:root {
+  --azul: #2a4fda;
+  --azul-escuro: #0b2574;
+  --branco: #ffffff;
+  --cinza-claro: #f5f7ff;
+  --off-white: #eff3ee;
+  --amarelo: #FBEC76;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  background-color: var(--branco);
+  color: #111;
+  overflow-x: hidden;
+}
+
+header {
+  background: var(--azul);
+  color: var(--branco);
+  padding: 1rem 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 40px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+p {
+  font-size: 1rem;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* Seção principal */
+.hero {
+  background-image: url("assets/hero-bg.png");
+  background-position: center;
+  background-size: cover;
+  color: var(--branco);
+  padding: 8rem 24%;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: 'Campuni', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transform: skew(13.2deg);
+}
+
+.bg {
+  background-color: var(--azul);
+  padding: 2rem 0;
+  transform: skew(-13.2deg);
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  transform: skew(13.2deg);
+}
+
+.bg .btn {
+  display: inline-block;
+  transform: skewX(13.2deg);
+  transform-origin: 0 0;
+}
+
+.btn {
+  background: #ffd200;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+              rgba(0, 0, 0, 0.12) 0px -12px 30px,
+              rgba(0, 0, 0, 0.12) 0px 4px 6px,
+              rgba(0, 0, 0, 0.17) 0px 12px 13px,
+              rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.btn:hover {
+  background: #ffbb00;
+}
+
+/* Seção O que Fazemos */
+section {
+  padding: 4rem 10%;
+}
+
+.fazemos {
+  background-color: var(--azul);
+}
+
+.titulo-secao {
+  font-family: 'Campuni', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--off-white);
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  width: fit-content;
+  padding: .6rem 3rem;
+  transform: skew(13.2deg);
+  margin-top: -1rem;
+}
+
+.bg-titulo-sec1 {
+  background-color: var(--azul-escuro);
+  width: fit-content;
+  margin: 0 auto;
+  transform: skew(-13.2deg);
+}
+
+.destaque-titulo {
+  font-weight: 100;
+}
+
+/* Layout aprimorado O que Fazemos */
+.conteudo-fazemos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* COLUNA ESQUERDA */
+.col-left {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.texto-fazemos {
+  line-height: 1.7;
+  color: var(--off-white);
+  padding-bottom: 1rem;
+  max-width: 600px;
+}
+
+.texto-fazemos a {
+  color: var(--amarelo);
+  text-decoration: underline;
+}
+
+/* Bloco inclinado para o infográfico e botão */
+.col-left .bloco-inclinado {
+  transform: skew(-13.2deg);
+  width: 90%;
+}
+
+.img-info {
+  background-color: #ccc;
+  width: 100%;
+  height: 15rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.img-info img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botão */
+.col-left button {
+  display: block;
+  background: var(--amarelo);
+  color: #000;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 1.5rem;
+}
+
+.col-left button:hover {
+  background: #f5d94a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.col-left button p {
+  transform: skew(13.2deg);
+  margin: 0;
+}
+
+/* COLUNA DIREITA */
+.col-right {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mosaico {
+  background-color: red;
+  width: 35vw;
+  height: 32.3rem;
+  transform: skew(-13.2deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.mosaico img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .conteudo-fazemos {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .col-left, .col-right {
+    width: 100%;
+  }
+
+  .mosaico {
+    width: 100%;
+    height: 18rem;
+    transform: none;
+  }
+
+  .col-left button, .img-info {
+    transform: none;
+  }
+}
+
+/* Equipe */
+.equipe {
+  background: linear-gradient(180deg, #e6ebff, #f8f9ff);
+  text-align: center;
+}
+
+.equipe .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card-equipe {
+  background: var(--branco);
+  padding: 1rem;
+  border-radius: 12px;
+  width: 180px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-equipe img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.card-equipe h4 {
+  font-family: 'Campuni', serif;
+  color: var(--azul-escuro);
+  margin-bottom: 0.3rem;
+}
+
+.card-equipe p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Documentos */
+.documentos {
+  background: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+}
+
+.documentos .descricao {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.grid-docs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-doc {
+  background: var(--branco);
+  color: #000;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 260px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.card-doc img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.card-doc h5 {
+  font-family: 'Campuni', serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-doc small {
+  display: block;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.card-doc .btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: var(--azul);
+  color: var(--branco);
+}
+
+footer {
+  background: var(--azul);
+  color: var(--branco);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+  
